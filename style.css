@@ -1,0 +1,282 @@
+ /* CSS样式 */
+ html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(160, 247, 241) 0%, rgb(228, 237, 148) 100%); /* 从浅蓝到浅绿的渐变 */
+  }
+  
+      .search-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2f3640;
+      height: 40px;
+      padding: 10px;
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .search-input {
+      border: none;
+      background: none;
+      outline: none;
+      color: rgb(11, 222, 219);
+      font-size: 16px;
+      line-height: 40px;
+      width: 0;
+      transition: width 0.4s;
+      margin-right: 10px; 
+  }
+  
+  .search-button {
+      color: rgb(202, 51, 13);
+      background-color: #b5e075;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.4s;
+  }
+  
+  .search-form:hover .search-input {
+      width: 240px;  
+      padding: 0 6px;
+  }
+  
+  .search-form:hover .search-button {
+      background-color: rgb(225, 94, 12);;
+  }
+  
+      .select-module {
+        margin-left: 10px;
+      }
+  
+      .cart-container {
+      cursor: pointer; /* Indicates it's clickable */
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgb(229, 198, 24);
+      border: 3px solid rgb(225, 18, 18);
+      border-radius: 5px;
+      padding: 10px;
+      transition: all 0.3s ease; /* Smooth transition for visual effects */
+  }
+  
+  .cart-container:hover {
+      box-shadow: 0 0 10px rgba(153, 0, 0, 0.1);
+  }
+  
+  .cart-items-hidden {
+      display: none;
+  }
+  
+  .cart-items-shown {
+      display: block;
+  }
+  
+      .remove-button {
+        cursor: pointer;
+        color: red;
+        margin-left: 10px;
+      }
+  
+      .remove-all-button {
+      padding: 5px 10px;
+      margin-top: 10px;
+      background-color: #c00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .remove-all-button:hover {
+      background-color: #f33;
+  }
+  
+      .logo {
+      position: absolute; /* 使用绝对定位 */
+      top: 0px; /* 距离顶部10像素 */
+      left: 0px; /* 距离左边10像素 */
+      width: 300px; /* 控制图片宽度，根据需要调整 */
+      height: auto; /* 高度自动缩放以保持图片比例 */
+  }
+     
+      .team {
+      position: absolute; /* 使用绝对定位 */
+      top: 650px; /* 距离顶部10像素 */
+      left: 0px; /* 距离左边10像素 */
+      width: 100px; /* 控制图片宽度，根据需要调整 */
+      height: auto; /* 高度自动缩放以保持图片比例 */
+      }
+  
+      .add-button {
+      background-color: #ec0c0c; /* 按钮的背景颜色 */
+      color: rgb(239, 234, 208); /* 文字颜色 */
+      border: none; /* 去除边框 */
+      cursor: pointer; /* 鼠标悬停时显示手型指针 */
+      padding: 0; /* 移除内边距，使用其他方法调整对齐 */
+      border-radius: 50%; /* 使按钮边缘完全圆形 */
+      display: inline-block; /* 使元素以块级方式显示，但仍然位于行内 */
+      width: 30px; /* 宽度，确保足以包含文字或图标 */
+      height: 30px; /* 高度，与宽度相同，确保是圆形 */
+      line-height: 30px; /* 行高，与高度一致以确保垂直居中 */
+      text-align: center; /* 文本居中显示 */
+      vertical-align: middle; /* 垂直居中对齐 */
+      transition: background 0.3s, transform 0.3s; /* 平滑过渡效果 */
+      font-size: 12px; /* 调整字体大小以适应按钮 */
+  }
+  
+  .add-button:hover {
+      background-color: #367b71; /* 悬停时的背景颜色 */
+      transform: scale(1.1); /* 悬停时略微放大 */
+  }
+  
+      #searchResults {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: #aedcef;
+      padding: 10px;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(23, 14, 14, 0.1);
+      margin-top: 30px;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
+      overflow: visible;
+      display: none; /* 初始状态为隐藏 */
+  }
+  
+  
+  
+  /* style.css */
+  .product-container {
+    margin-bottom: 10px;
+  }
+  
+  .product-name {
+    font-weight: bold;
+  }
+  
+  .product-price {
+    color: green;
+  }
+  
+  .product-marketname {
+    color: blue;
+  }
+  
+  /* 其他样式维持不变 */
+  /* 以下为修改*/
+  .form-container {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="password"],
+  .form-container input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+  
+  .form-container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .form-container button:hover {
+      opacity: 0.8;
+  }
+  
+  .form-container a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+  }
+  
+  .logout-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .logout-button {
+    padding: 8px 15px;
+    background-color: #f44336; /* Red color for visibility, adjust as per your theme */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #c53727; /* Darker shade of red on hover */
+  }
+
+  .search-title {
+    text-align: center; /* 标题居中 */
+    margin-top: -160px; /* 顶部使用负外边距向上移动 */
+    font-size: 44px; /* 字体大小设置为44px */
+    font-family: 'Lato', sans-serif; /* 使用Lato字体，后备为无衬线字体 */
+    background: linear-gradient(to right, rgba(0, 128, 255, 0.799), rgba(166, 0, 255, 0.81), rgba(255, 0, 217, 0.831)); /* 渐变颜色从红到橙到黄 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* 对于不支持background-clip的浏览器，这行可能不起作用 */
+    background-clip: text;
+    color: transparent; /* 设置字体颜色为透明，允许背景显示为文字颜色 */
+  }
+  
+  /* 添加CSS样式来定位你的按钮 */
+.about-us-btn {
+    position: absolute; /* 使用绝对定位 */
+    top: 10px; /* 距离顶部的距离 */
+    right: 100px; /* 距离右侧的距离 */
+    color: #0a0ef9; /* 字体颜色 */
+    text-decoration: none; /* 移除下划线 */
+  }
+  
+  /* 你可能还想添加hover效果 */
+  .about-us-btn:hover {
+    color: #c71515; /* 鼠标悬停时的背景颜色 */
+  }
+
+/* 简化后的下拉选择框样式 */
+#searchMode {
+  padding: 10px 15px;
+  border: 2px solid #3be619; 
+  border-radius: 45px; /* 轻微的边角圆润 */
+  background-color: #aef7f5;
+  font-size: 16px; /* 字体大小 */
+  color: #b41eeafb; /* 字体颜色 */
+  cursor: pointer; /* 鼠标悬停时的手型指针 */
+  appearance: none; /* 移除默认样式 */
+}

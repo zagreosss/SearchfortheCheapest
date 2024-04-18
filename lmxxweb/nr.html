@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/swiper.css" type="text/css">
+<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+</head>
+
+<body>
+<div class="bj">
+	<div class="header">
+		<div class="headerbox">
+			<h1 class="logo">Team 20</h1>
+			<div class="header_right">
+				<ul>
+					<li><a href="index.html">Shop</a></li>
+					<li><a href="">Who we are</a></li>
+					<li class="cur"><a href="nr.html">Basket</a></li>
+					<li><span><img src="images/a8.png"/></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="srnr">
+		<div class="srnr_title">
+			<h2>Basket <b>3 items</b></h2>
+		</div>
+		<div class="srnr_nr">
+			<div class="srnr_left">
+				<ul>
+					<li>
+						<div class="srnrbox">
+							<h2>Heirloom tomato</h2>
+							<p>￡5.99 / kg</p>
+							<h3>￡5.99</h3>
+							<div class="numBtn">
+								<div class="remove"></div>
+								<p>0</p>
+								<div class="add"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="srnrbox">
+							<h2>Genger</h2>
+							<p>￡5.99 / kg</p>
+							<h3>￡5.99</h3>
+							<div class="numBtn">
+								<div class="remove"></div>
+								<p>0</p>
+								<div class="add"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="srnrbox">
+							<h2>Onion</h2>
+							<p>￡3.00 / kg</p>
+							<h3>￡15.00</h3>
+							<div class="numBtn">
+								<div class="remove"></div>
+								<p>0</p>
+								<div class="add"></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="srnr_right">
+				<h2>Order summary</h2>
+				<ul>
+					<li>
+						<p><span class="fr">￡25.98</span>Subtotal</p>
+					</li>
+					<li>
+						<p><span class="fr">￡3.99</span>Carriage</p>
+					</li>
+					<li>
+						<h3><span class="fr">￡29.97</span>Total</h3>
+					</li>
+				</ul>
+				<a href="" class="btn2">Continue to payment</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="bj1"></div>
+</body>
+</html>
+<script>
+  $(".sear_title li").click(function(){
+		var num = $(this).index();
+		$(this).addClass("cur").siblings().removeClass("cur");
+		$('.sear_nr .sear_box').eq(num).show().siblings().hide();
+	}) 
+	$('.header_right span').click(function(){
+		$('.bj1').fadeIn();
+	}) 
+	$('.bj1').click(function(){
+		$('.bj1').fadeOut();
+	}) 
+</script>
+<script type="text/javascript">
+	$('.numBtn .add').click(function(){
+		var num=$(this).parent().children('p').html();
+		if(num>99){
+			num=99;
+			$(this).parent().children('p').html(num);
+		}else{
+			num++;
+			$(this).parent().children('p').html(num);
+		}
+	})
+	$('.numBtn .remove').click(function(){
+		var num=$(this).parent().children('p').html();
+		if(num<1){
+			num=0;
+			$(this).parent().children('p').html(num);
+		}else{
+			num--;
+			$(this).parent().children('p').html(num);
+		}
+	})
+</script>

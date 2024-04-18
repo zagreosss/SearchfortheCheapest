@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search for the Cheapest</title>
+  <link rel="stylesheet" href="style.css"> <!-- 引入外部CSS文件 -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="logout-container">
+    <a href="login.html" class="logout-button">Logout</a>
+  </div>
+
+<!-- 在页面适当的位置添加一个包含静态文本的div，但默认是隐藏的 -->
+<div id="about-text" style="display: none;">
+  <!-- 这里填写关于我们的信息 -->
+  <p>Here is some static text about us...</p>
+</div>
+
+  <h2 class="search-title">Search for the cheapest</h2> <!-- 添加的文字 -->
+
+  <a href="#about" class="about-us-btn">About Us</a>
+
+
+
+
+  <select id="searchMode" name="searchMode">
+    <option value="liquid">type:liquid</option>
+    <option value="solid" selected>type:solid</option>
+    <option value="item">type:Item</option>
+  </select>
+
+
+
+
+  <div class="search-form">
+    <input type="text" class="search-input" id="searchQuery" placeholder="search products..." />
+    <button class="search-button" onclick="searchProducts()">
+      <img src="search.png" alt="Search" style="width: 100%; height: auto;" draggable="false">
+  </button>
+  </div>
+  <div id="searchResults">
+    <!-- 搜索结果将显示在这里 -->
+  </div>
+  
+  <div class="cart-container" onclick="toggleCart()">
+    <h3>shopping cart</h3>
+    <div id="cartSummary">
+        <span>Total: </span><span id="totalPrice">£0.00</span>
+    </div>
+    <ul id="cartItems" class="cart-items-hidden">
+        <!-- Cart items will be listed here -->
+    </ul>
+    <button onclick="removeAllItems(event)" class="remove-all-button">Remove All</button>
+</div>
+
+
+
+<script src="scripts.js"></script>
+
+</body>
+</html> 
